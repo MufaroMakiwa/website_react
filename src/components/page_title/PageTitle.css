@@ -1,0 +1,44 @@
+.page-title {
+  background-color: black;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  /* we need to have a 0ms transition in order to allow for the sticky top
+   * to work seamlessly */
+  transition: padding-top 0ms;
+}
+
+.page-title span {
+  padding: 2rem 1rem;
+  display: inline-block;
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .page-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .page-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-title {
+    font-size: 3.25rem;
+  }
+}

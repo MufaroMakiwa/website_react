@@ -1,6 +1,7 @@
 .footer-container {
   background-color: var(--color-black);
   padding: 2rem 1rem;
+  font-size: 0.95rem;
   color: white;
   font-weight: 200;
   border-top: 3px solid var(--color-white-alpha-020);
@@ -16,7 +17,7 @@
 .footer-box span {
   display: block;
   font-weight: 200;
-  padding: 0.2rem 0;
+  margin: 0 auto;
 }
 
 .footer-email {
@@ -39,7 +40,8 @@
   font-size: 2.25rem;
   justify-content: center;
   align-items: center;
-  margin: 1rem 1.25rem;
+  margin: 0 1.25rem;
+  padding: 0.2rem;
 }
 
 .footer-social-media-icon a svg {

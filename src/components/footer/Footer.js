@@ -17,7 +17,7 @@ const Footer = () => {
         <span>You can contact us at</span>
         <span>
           <a href="mailto:africans_exec@mit.edu" className="footer-email">
-            africans_exec@mit.edu
+            <b>africans_exec@mit.edu</b>
           </a>
         </span>
         <br />
