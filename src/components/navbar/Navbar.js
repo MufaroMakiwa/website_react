@@ -2,9 +2,9 @@ import React from "react";
 import "./Navbar.css";
 
 
-const Navbar = () => {
+const Navbar = ({ active, setActiveAndPageTitle }) => {
   return (
-    <div>
+    <div className="main-container navbar-container">
 
     </div>
   )

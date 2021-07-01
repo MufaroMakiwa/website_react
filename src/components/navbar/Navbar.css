@@ -1,0 +1,14 @@
+.navbar-container {
+  background-color: var(--color-red);
+  color: white;
+  padding: 1.2rem 0 1.2rem 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.sticky-navigation-bar {
+  position: fixed;
+  top: 0;
+  border-bottom: 3px solid var(--color-white-alpha-050);
+}
