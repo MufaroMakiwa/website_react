@@ -1,0 +1,45 @@
+.header-container {
+  padding: 1rem;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+.header-logo {
+  display: block;
+  max-width: 20%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .header-logo {
+    display: block;
+    max-width: 30%;
+    margin: 0 auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header-logo {
+    display: block;
+    max-width: 27.5%;
+    margin: 0 auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .header-logo {
+    display: block;
+    max-width: 22.5%;
+    margin: 0 auto;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .header-logo {
+    display: block;
+    max-width: 20%;
+    margin: 0 auto;
+  }
+}
