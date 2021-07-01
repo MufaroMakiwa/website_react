@@ -24,25 +24,25 @@ const Footer = () => {
         <span>Connect with us</span>
       </div>
       <div className="footer-social-media">
-        <span class="footer-social-media-icon facebook">
+        <span className="footer-social-media-icon facebook">
           <a target="blank" href="https://www.facebook.com/mitafricans/">
             <FontAwesomeIcon icon={faFacebookSquare} />
           </a>
         </span>
 
-        <span class="footer-social-media-icon instagram">
+        <span className="footer-social-media-icon instagram">
           <a target="blank" href="https://www.instagram.com/mitafricans/">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </span>
 
-        <span class="footer-social-media-icon medium">
+        <span className="footer-social-media-icon medium">
           <a target="blank" href="https://medium.com/mitafricans/">
             <FontAwesomeIcon icon={faMedium} />
           </a>
         </span>
 
-        <span class="footer-social-media-icon twitter">
+        <span className="footer-social-media-icon twitter">
           <a target="blank" href="https://twitter.com/mitafricans/">
             <FontAwesomeIcon icon={faTwitterSquare} />
           </a>

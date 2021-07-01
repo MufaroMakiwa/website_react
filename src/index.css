@@ -77,10 +77,14 @@ a {
   background-color: transparent;
 }
 
+.page-container {
+  width: 100vw;
+  display: block;
+}
+
 .main-container {
   min-width: 100%;
   max-width: 100%;
   display: block;
   margin: 0 auto;
 }
-

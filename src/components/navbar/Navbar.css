@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.sticky-navigation-bar {
+.navbar-sticky {
   position: fixed;
   top: 0;
   border-bottom: 3px solid var(--color-white-alpha-050);

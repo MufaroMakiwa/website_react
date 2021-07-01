@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 
 
-const Home = () => {
+const Home = ({ setActiveAnPageTitle }) => {
+
+  useEffect(() => {
+    setActiveAnPageTitle("Home", "Welcome to MIT Africans")
+  })
+
   return (
     <div className="main-container">
       HOME

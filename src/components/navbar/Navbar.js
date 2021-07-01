@@ -2,9 +2,9 @@ import React from "react";
 import "./Navbar.css";
 
 
-const Navbar = ({ active, setActiveAndPageTitle }) => {
+const Navbar = ({ active, navbarRef }) => {
   return (
-    <div className="main-container navbar-container">
+    <div className="main-container navbar-container" ref={navbarRef}>
 
     </div>
   )
