@@ -1,7 +1,7 @@
 import React from "react";
 import "./FAQs.css";
 
-function FAQs() {
+const FAQs = () => {
   return (
     <div>
       FAQs

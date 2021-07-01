@@ -13,7 +13,7 @@ import Resources from "./pages/resources/Resources";
 import FAQs from "./pages/faq/FAQs";
 
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>

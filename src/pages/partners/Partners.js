@@ -1,7 +1,7 @@
 import React from "react";
 import "./Partners.css";
 
-function Partners() {
+const Partners = () => {
   return (
     <div>
       PARTNERS
