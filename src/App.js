@@ -2,7 +2,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 
 import Home from "./pages/home/Home";
@@ -21,6 +22,9 @@ function App() {
         <Route path="/partners" component={Partners} />
         <Route path="/resources" component={Resources} />
         <Route path="/faq" component={FAQs} />
+
+        {/* When a user enters an invalid route, redirect to the home page */}
+        <Redirect to="/" />
       </Switch>
     </Router>
   )

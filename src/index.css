@@ -1,5 +1,77 @@
+/**
+ * ============================================================================
+ * Setting global variables
+ * ============================================================================
+ */
+
+:root {
+  --color-red: rgba(152, 38, 53, 1.0);
+  --color-red-light: rgba(227, 145, 156, 1.0);
+  --color-error: rgba(255, 80, 61, 1.0);
+  --color-error-light: rgba(255, 149, 138, 1.0);
+  --color-black: rgba(0, 0, 0, 1.0);
+  --color-black-alpha-005: rgba(0, 0, 0, 0.05);
+  --color-black-alpha-010: rgba(0, 0, 0, 0.10);
+  --color-black-alpha-015: rgba(0, 0, 0, 0.15);
+  --color-black-alpha-020: rgba(0, 0, 0, 0.20);
+  --color-black-alpha-030: rgba(0, 0, 0, 0.30);
+  --color-black-alpha-035: rgba(0, 0, 0, 0.35);
+  --color-black-alpha-040: rgba(0, 0, 0, 0.40);
+  --color-black-alpha-050: rgba(0, 0, 0, 0.50);
+  --color-black-alpha-060: rgba(0, 0, 0, 0.60);
+  --color-black-alpha-070: rgba(0, 0, 0, 0.70);
+  --color-black-alpha-080: rgba(0, 0, 0, 0.80);
+  --color-grey: rgba(175, 175, 175, 1.0);
+  --color-box-shadow: var(--color-black-alpha-015);
+  --color-box-shadow-dark: var(--color-black-alpha-035);
+  --color-transparent: rgba(0, 0, 0, 0);
+  --color-white-alpha-010: rgba(255, 255, 255, 0.10);
+  --color-white-alpha-020: rgba(255, 255, 255, 0.20);
+  --color-white-alpha-030: rgba(255, 255, 255, 0.30);
+  --color-white-alpha-040: rgba(255, 255, 255, 0.40);
+  --color-white-alpha-050: rgba(255, 255, 255, 0.50);
+  --color-white-alpha-060: rgba(255, 255, 255, 0.60);
+  --color-white-alpha-070: rgba(255, 255, 255, 0.70);
+  --color-white-alpha-080: rgba(255, 255, 255, 0.80);
+  --color-white-alpha-090: rgba(255, 255, 255, 0.90);
+  --color-facebook: rgba(59, 89, 152, 1.0);
+  --color-twitter: rgba(0, 172, 237, 1.0);
+  --color-instagram: rgba(251, 57, 88, 1.0);
+  --color-medium: rgba(26, 167, 125, 1.0);
+  --screen-xs: 576px;
+  --screen-sm: 768px;
+  --screen-md: 992px;
+  --screen-lg: 1200px;
+  --z-index-level-ceil: 1000; /* highest level for HTML elements */
+  --z-index-level-1st: 900; /* use this for the menu in sizeXs */
+  --z-index-level-2nd: 800; /* use this for modals */
+  --z-index-level-3rd: 700;
+  --z-index-level-4th: 600;
+  --z-index-level-5th: 500;
+  --z-index-level-ground: 0; /* lowest level for HTML elements */
+}
+
+/**
+ * ============================================================================
+ * Changes affecting the entire website
+ * ============================================================================
+ **/
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+
+.main-container {
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
