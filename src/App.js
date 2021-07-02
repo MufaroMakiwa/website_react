@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +25,7 @@ const App = () => {
   const [active, setActive] = useState("");
   const [pageTitle, setPageTitle] = useState("");
 
-  // references to header and navbar to make navbar sticky
+  // references to header and navbar to make navbar sticky on scroll
   const headerRef = useRef();
   const pageTitleRef = useRef();
   const navbarRef = useRef();

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 
 const Navbar = ({ active, navbarRef }) => {
+  // to toggle the collapsed menu
+  const [displayMenu, setDisplayMenu] = useState(false);
+
   // to navigate to other pages when user clicks on a navigation link
   const history = useHistory();
 
   const navigateToPage = (selected) => {
+    // close the side menu if it is open
+    if (displayMenu) {
+      setDisplayMenu(false);
+    }
     if (selected === active) {
       history.go(0)
     } else {
@@ -36,15 +45,31 @@ const Navbar = ({ active, navbarRef }) => {
     }
   }
 
+  const ensureSideMenuClosedAboveXsWindowWidth = () => {
+    if (window.innerWidth >= 600) {
+      navbarRef.current.classList.remove("open-side-menu");
+      setDisplayMenu(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", ensureSideMenuClosedAboveXsWindowWidth);
+    return () => window.removeEventListener("resize", ensureSideMenuClosedAboveXsWindowWidth);
+  })
+
 
   return (
-    <div className="main-container navbar-container" ref={navbarRef}>
+    <div
+      className={`main-container navbar-container ${displayMenu ? "open-side-menu" : ""}`}
+      ref={navbarRef}>
       <div className="navbar-title-on-xs-screen">
         <span>{getNavBarTitle()}</span>
       </div>
 
-      <div className="navbar-toggler">
-        X
+      <div
+        className="navbar-toggler"
+        onClick={() => setDisplayMenu(true)}>
+        <FontAwesomeIcon icon={faBars} />
       </div>
       <ul>
         <li
@@ -76,6 +101,7 @@ const Navbar = ({ active, navbarRef }) => {
           <span>FAQs</span>
         </li>
       </ul>
+      <div className="navbar-modal" onClick={() => setDisplayMenu(false)}></div>
     </div>
   )
 }

@@ -9,6 +9,7 @@
 
 :root {
   --color-red: rgba(152, 38, 53, 1.0);
+  --color-red-transparent: rgba(152, 38, 53, 0.975);
   --color-red-light: rgba(227, 145, 156, 1.0);
   --color-error: rgba(255, 80, 61, 1.0);
   --color-error-light: rgba(255, 149, 138, 1.0);

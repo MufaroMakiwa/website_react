@@ -9,7 +9,7 @@
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 600px) {
   .header-logo {
     display: block;
     max-width: 30%;
