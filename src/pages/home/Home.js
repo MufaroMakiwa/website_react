@@ -5,12 +5,12 @@ import "./Home.css";
 const Home = ({ setActiveAnPageTitle }) => {
 
   useEffect(() => {
-    setActiveAnPageTitle("Home", "Welcome to MIT Africans")
+    setActiveAnPageTitle("home", "Welcome to MIT Africans")
   })
 
   return (
-    <div className="main-container">
-      HOME
+    <div className="page-container">
+      Home
     </div>
   )
 }

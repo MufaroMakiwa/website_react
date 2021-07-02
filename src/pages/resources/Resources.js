@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Resources.css";
 
-const Resources = () => {
+const Resources = ({ setActiveAnPageTitle }) => {
+
+  useEffect(() => {
+    setActiveAnPageTitle("resources", "Resources for MIT Africans")
+  })
+
   return (
     <div>
       RESOURCES

@@ -7,10 +7,10 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
+import AboutUs from "./pages/about-us/AboutUs";
 import Partners from "./pages/partners/Partners";
 import Resources from "./pages/resources/Resources";
-import FAQs from "./pages/faq/FAQs";
+import FAQs from "./pages/faqs/FAQs";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import PageTitle from "./components/page_title/PageTitle";
@@ -59,18 +59,18 @@ const App = () => {
 
 
   return (
-    <div className="page-container">
-      <Header headerRef={headerRef} />
-      <Navbar active={active} navbarRef={navbarRef} />
-      <PageTitle title={pageTitle} pageTitleRef={pageTitleRef} />
+    <div className="app-container">
       <Router>
+        <Header headerRef={headerRef} />
+        <Navbar active={active} navbarRef={navbarRef} />
+        <PageTitle title={pageTitle} pageTitleRef={pageTitleRef} />
         <Switch>
           <Route
             exact path="/"
             render={(props) => (<Home {...props} setActiveAnPageTitle={setActiveAnPageTitle} />)} />
           <Route
-            path="/about"
-            render={(props) => (<About {...props} setActiveAnPageTitle={setActiveAnPageTitle} />)} />
+            path="/about-us"
+            render={(props) => (<AboutUs {...props} setActiveAnPageTitle={setActiveAnPageTitle} />)} />
           <Route
             path="/partners"
             render={(props) => (<Partners {...props} setActiveAnPageTitle={setActiveAnPageTitle} />)} />
@@ -78,14 +78,14 @@ const App = () => {
             path="/resources"
             render={(props) => (<Resources {...props} setActiveAnPageTitle={setActiveAnPageTitle} />)} />
           <Route
-            path="/faq"
+            path="/faqs"
             render={(props) => (<FAQs {...props} setActiveAnPageTitle={setActiveAnPageTitle} />)} />
 
           {/* When a user enters an invalid route, redirect to the home page */}
           <Redirect to="/" />
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   )
 }

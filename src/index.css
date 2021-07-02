@@ -41,7 +41,7 @@
   --color-twitter: rgba(0, 172, 237, 1.0);
   --color-instagram: rgba(251, 57, 88, 1.0);
   --color-medium: rgba(26, 167, 125, 1.0);
-  --screen-xs: 576px;
+  --screen-xs: 600px;
   --screen-sm: 768px;
   --screen-md: 992px;
   --screen-lg: 1200px;
@@ -77,9 +77,16 @@ a {
   background-color: transparent;
 }
 
-.page-container {
+.app-container {
   width: 100vw;
-  display: block;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex-grow: 1;
 }
 
 .main-container {
