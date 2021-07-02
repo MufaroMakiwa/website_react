@@ -1,0 +1,106 @@
+.faq-card-container {
+  margin: 1.5rem 1rem 1rem 1rem;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  border: 1px solid var(--color-black-alpha-020);
+}
+
+.faq-card-container.open {
+  -webkit-box-shadow: 0 1px 6px 0 var(--color-box-shadow); 
+  -moz-box-shadow: 0 1px 6px 0 var(--color-box-shadow); 
+  box-shadow: 0 1px 6px  var(--color-box-shadow);
+}
+
+.faq-card-summary {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem 1rem 1rem;
+  background-color: var(--color-black-alpha-005);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.faq-card-summary:hover {
+  background-color: var(--color-black-alpha-010);
+}
+
+.faq-card-summary span {
+  font-weight: 600;
+}
+
+.faq-card-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.faq-card-icon {
+  color: var(--color-red);
+}
+
+.faq-card-container.open .faq-card-icon {
+  transform: rotate(-180deg)
+}
+
+.faq-card-content {
+  display: none;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0 1rem;
+}
+
+.faq-card-container.open .faq-card-content {
+  display: flex;
+  -webkit-animation: sweep-in 0.5s ease-in-out;
+  -moz-animation: sweep-in 0.5s ease-in-out;
+  -ms-animation: sweep-in 0.5s ease-in-out;
+  -o-animation: sweep-in 0.5s ease-in-out;
+  animation: sweep-in 0.5s ease-in-out;
+
+  -webkit-animation-fill-mode: forwards;  
+  -moz-animation-fill-mode: forwards;  
+  -ms-animation-fill-mode: forwards;  
+  -o-animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+}
+
+.faq-card-content p {
+  margin-top: 1rem;
+}
+
+@keyframes sweep-in {
+  from {
+    opacity: 0; 
+    margin-top: -10px;
+  }
+
+  to {
+    opacity: 1; 
+    margin-top: 0;
+  }
+}
+
+@keyframes sweep-out {
+  from {
+    opacity: 1; 
+    margin-top: 0;
+  }
+
+  to {
+    opacity: 0; 
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .faq-card-container {
+    margin: 3rem 2rem 2rem 2rem;
+  }
+}
