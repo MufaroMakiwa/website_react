@@ -70,7 +70,7 @@
 
 body {
   margin: 0;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 a {
@@ -88,6 +88,10 @@ a {
 
 .page-container {
   flex-grow: 1;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .main-container {

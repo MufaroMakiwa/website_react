@@ -5,22 +5,69 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 
-const Navbar = ({ active, navbarRef }) => {
+const Navbar = ({ active, navbarRef, headerRef }) => {
   // to toggle the collapsed menu
   const [displayMenu, setDisplayMenu] = useState(false);
 
   // to navigate to other pages when user clicks on a navigation link
   const history = useHistory();
 
+  const getNavbarOffset = () => {
+    let navbarOffset = window.scrollY - headerRef.current.clientHeight;
+    return navbarOffset;
+  }
+
+  const disableBodyScrolling = () => {
+    // const scrollY = window.scrollY;
+    // const navbarOffset = getNavbarOffset();
+    // if (navbarOffset > 0) {
+    //   navbarRef.current.classList.add("navbar-stick-with-open-menu");
+    // }
+    // document.body.style.position = 'fixed';
+    // document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add("no-scroll");
+  }
+
+  const enableBodyScrolling = () => {
+    // const scrollY = document.body.style.top;
+    // document.body.style.position = '';
+    // document.body.style.top = '';
+    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    // navbarRef.current.classList.remove("navbar-stick-with-open-menu");
+    document.body.classList.remove("no-scroll");
+  }
+
   const navigateToPage = (selected) => {
     // close the side menu if it is open
     if (displayMenu) {
+      navbarRef.current.classList.remove("open-side-menu");
+      enableBodyScrolling();
       setDisplayMenu(false);
     }
     if (selected === active) {
       history.go(0)
     } else {
       history.push("/" + selected)
+    }
+  }
+
+  const openMenu = () => {
+    navbarRef.current.classList.add("open-side-menu");
+    disableBodyScrolling();
+    setDisplayMenu(true);
+  }
+
+  const closeMenu = () => {
+    navbarRef.current.classList.remove("open-side-menu");
+    enableBodyScrolling();
+    setDisplayMenu(false);
+  }
+
+  const ensureSideMenuClosedAboveXsWindowWidth = () => {
+    if (window.innerWidth >= 600) {
+      navbarRef.current.classList.remove("open-side-menu");
+      enableBodyScrolling();
+      setDisplayMenu(false);
     }
   }
 
@@ -45,13 +92,6 @@ const Navbar = ({ active, navbarRef }) => {
     }
   }
 
-  const ensureSideMenuClosedAboveXsWindowWidth = () => {
-    if (window.innerWidth >= 600) {
-      navbarRef.current.classList.remove("open-side-menu");
-      setDisplayMenu(false);
-    }
-  }
-
   useEffect(() => {
     window.addEventListener("resize", ensureSideMenuClosedAboveXsWindowWidth);
     return () => window.removeEventListener("resize", ensureSideMenuClosedAboveXsWindowWidth);
@@ -60,7 +100,7 @@ const Navbar = ({ active, navbarRef }) => {
 
   return (
     <div
-      className={`main-container navbar-container ${displayMenu ? "open-side-menu" : ""}`}
+      className="main-container navbar-container"
       ref={navbarRef}>
       <div className="navbar-title-on-xs-screen">
         <span>{getNavBarTitle()}</span>
@@ -68,7 +108,7 @@ const Navbar = ({ active, navbarRef }) => {
 
       <div
         className="navbar-toggler"
-        onClick={() => setDisplayMenu(true)}>
+        onClick={openMenu}>
         <FontAwesomeIcon icon={faBars} />
       </div>
       <ul>
@@ -101,7 +141,7 @@ const Navbar = ({ active, navbarRef }) => {
           <span>FAQs</span>
         </li>
       </ul>
-      <div className="navbar-modal" onClick={() => setDisplayMenu(false)}></div>
+      <div className="navbar-modal" onClick={closeMenu} onWheel={() => console.log("Scrolling")}></div>
     </div>
   )
 }
