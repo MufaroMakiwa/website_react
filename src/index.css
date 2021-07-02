@@ -86,10 +86,6 @@ a {
   flex-direction: column;
 }
 
-.page-container {
-  flex-grow: 1;
-}
-
 .no-scroll {
   overflow: hidden;
 }
@@ -99,4 +95,217 @@ a {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+/**
+ * ============================================================================
+ * Editing the Page Body
+ * ============================================================================
+ * */
+
+ .page-container {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  background-color: var(--color-grey);
+  z-index: var(--z-index-level-ground);
+}
+
+.page-content {
+  background-color: white;
+  max-width: 77.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0 0 0.4rem var(--color-box-shadow-dark);
+  -moz-box-shadow: 0 0 0.4rem var(--color-box-shadow-dark);
+  box-shadow: 0 0 0.4rem var(--color-box-shadow-dark);
+  border-left: 2px solid var(--color-box-shadow-dark);
+  border-right: 2px solid var(--color-box-shadow-dark);
+}
+
+.page-content > * {
+  width: 100%;
+}
+
+.page-content a, .page-content a:link, .page-content a:visited {
+  color: var(--color-red-light);
+  font-weight: 700;
+}
+
+.page-content a:hover {
+  text-decoration: underline;
+}
+
+.page-content img {
+  display: block;
+  margin: 0.75rem auto 1.75rem auto;
+  width: 90%;
+  border-left: 5px solid var(--color-black-alpha-010);
+  border-right: 5px solid var(--color-black-alpha-010);
+  box-shadow: 0 0 0.4rem var(--color-box-shadow-dark);
+}
+
+.page-content img:hover {
+  box-shadow: 0 0 0.5rem var(--color-box-shadow);
+}
+
+.page-content .body-big-text {
+  font-size: 2.5rem;
+  font-weight: 100;
+  background-color: var(--color-black-alpha-005);
+  border-left: 1.5rem solid var(--color-black-alpha-020);
+  border-right: 1.5rem solid var(--color-black-alpha-020);
+}
+
+/* the following affects everything, but we treat it as mainly affecting the page body */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  padding-bottom: 0.375rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1, h2 {
+  border-bottom: solid 5px var(--color-black-alpha-005);
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.55rem;
+  text-decoration: underline;
+}
+
+h4 {
+  font-size: 1.45rem;
+}
+
+h5 {
+  font-size: 1.35rem;
+  font-style: oblique;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+.page-content span, .page-content div, .page-content {
+  font-size: 1.1rem;
+}
+
+
+@media (max-width: 599px) {
+  .page-content {
+    max-width: 100%;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .page-content {
+    max-width: 87.5%;
+  }
+
+  .page-content .body-big-text {
+    font-size: 3.0rem;
+  }
+
+  h1 {
+    font-size: 2.00rem;
+  }
+
+  h2 {
+    font-size: 1.90rem;
+  }
+
+  h3 {
+    font-size: 1.80rem;
+  }
+
+  h4 {
+    font-size: 1.70rem;
+  }
+
+  h5 {
+    font-size: 1.60rem;
+  }
+
+  h6 {
+    font-size: 1.50rem;
+  }
+}
+
+@media (min-width: 768px) {
+  p, .page-content span, .page-content div, .page-content {
+    font-size: 1.25rem;
+  }
+
+  .page-content .body-big-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 2.10rem;
+  }
+
+  h3 {
+    font-size: 1.80rem;
+  }
+
+  .page-content .body-big-text {
+    font-size: 4.0rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .page-content {
+    max-width: 82.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.95rem;
+  }
+
+  .page-content .body-big-text {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .page-content {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .page-content {
+    max-width: 55%;
+  }
 }

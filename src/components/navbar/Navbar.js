@@ -12,36 +12,21 @@ const Navbar = ({ active, navbarRef, headerRef }) => {
   // to navigate to other pages when user clicks on a navigation link
   const history = useHistory();
 
-  const getNavbarOffset = () => {
-    let navbarOffset = window.scrollY - headerRef.current.clientHeight;
-    return navbarOffset;
-  }
 
-  const disableBodyScrolling = () => {
-    // const scrollY = window.scrollY;
-    // const navbarOffset = getNavbarOffset();
-    // if (navbarOffset > 0) {
-    //   navbarRef.current.classList.add("navbar-stick-with-open-menu");
-    // }
-    // document.body.style.position = 'fixed';
-    // document.body.style.top = `-${scrollY}px`;
+  const openMenuAndDisableBodyScrolling = () => {
+    navbarRef.current.classList.add("open-side-menu");
     document.body.classList.add("no-scroll");
   }
 
-  const enableBodyScrolling = () => {
-    // const scrollY = document.body.style.top;
-    // document.body.style.position = '';
-    // document.body.style.top = '';
-    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    // navbarRef.current.classList.remove("navbar-stick-with-open-menu");
+  const closeMenuAndEnableBodyScrolling = () => {
+    navbarRef.current.classList.remove("open-side-menu");
     document.body.classList.remove("no-scroll");
   }
 
   const navigateToPage = (selected) => {
     // close the side menu if it is open
     if (displayMenu) {
-      navbarRef.current.classList.remove("open-side-menu");
-      enableBodyScrolling();
+      closeMenuAndEnableBodyScrolling();
       setDisplayMenu(false);
     }
     if (selected === active) {
@@ -52,21 +37,18 @@ const Navbar = ({ active, navbarRef, headerRef }) => {
   }
 
   const openMenu = () => {
-    navbarRef.current.classList.add("open-side-menu");
-    disableBodyScrolling();
+    openMenuAndDisableBodyScrolling();
     setDisplayMenu(true);
   }
 
   const closeMenu = () => {
-    navbarRef.current.classList.remove("open-side-menu");
-    enableBodyScrolling();
+    closeMenuAndEnableBodyScrolling();
     setDisplayMenu(false);
   }
 
   const ensureSideMenuClosedAboveXsWindowWidth = () => {
     if (window.innerWidth >= 600) {
-      navbarRef.current.classList.remove("open-side-menu");
-      enableBodyScrolling();
+      closeMenuAndEnableBodyScrolling();
       setDisplayMenu(false);
     }
   }

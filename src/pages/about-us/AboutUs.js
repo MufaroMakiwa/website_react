@@ -8,8 +8,10 @@ const AboutUs = ({ setActiveAnPageTitle }) => {
   })
 
   return (
-    <div>
-      ABOUT
+    <div className="page-container">
+      <div className="page-content">
+        About Us
+      </div>
     </div>
   )
 }

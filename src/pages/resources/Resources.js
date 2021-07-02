@@ -8,8 +8,10 @@ const Resources = ({ setActiveAnPageTitle }) => {
   })
 
   return (
-    <div>
-      RESOURCES
+    <div className="page-container">
+      <div className="page-content">
+        Resources
+      </div>
     </div>
   )
 }

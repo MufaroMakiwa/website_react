@@ -8,8 +8,10 @@ const FAQs = ({ setActiveAnPageTitle }) => {
   })
 
   return (
-    <div>
-      FAQs
+    <div className="page-container">
+      <div className="page-content">
+        FAQs
+      </div>
     </div>
   )
 }

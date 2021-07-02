@@ -8,8 +8,10 @@ const Partners = ({ setActiveAnPageTitle }) => {
   })
 
   return (
-    <div>
-      PARTNERS
+    <div className="page-container">
+      <div className="page-content">
+        Partners
+      </div>
     </div>
   )
 }
