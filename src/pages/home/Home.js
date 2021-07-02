@@ -17,7 +17,9 @@ const Home = ({ setActiveAnPageTitle }) => {
           We are a diverse community of Africans and friends of Africa at
           Massachusetts Institute of Technology.
         </p>
-        <img src={CoverPhoto} alt="Cover" />
+        <div className="image-soft-edges">
+          <img src={CoverPhoto} alt="Cover" />
+        </div>
         <h2>Events on Facebook</h2>
         <p>Stay up to date with our events on{" "}
           <a href="https://www.facebook.com/pg/mitafricans/events/">Facebook</a>.

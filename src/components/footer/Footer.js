@@ -25,25 +25,25 @@ const Footer = () => {
       </div>
       <div className="footer-social-media">
         <span className="footer-social-media-icon facebook">
-          <a target="blank" href="https://www.facebook.com/mitafricans/">
+          <a target="_blank" href="https://www.facebook.com/mitafricans/" rel="noreferrer">
             <FontAwesomeIcon icon={faFacebookSquare} />
           </a>
         </span>
 
         <span className="footer-social-media-icon instagram">
-          <a target="blank" href="https://www.instagram.com/mitafricans/">
+          <a target="_blank" href="https://www.instagram.com/mitafricans/" rel="noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </span>
 
         <span className="footer-social-media-icon medium">
-          <a target="blank" href="https://medium.com/mitafricans/">
+          <a target="_blank" href="https://medium.com/mitafricans/" rel="noreferrer">
             <FontAwesomeIcon icon={faMedium} />
           </a>
         </span>
 
         <span className="footer-social-media-icon twitter">
-          <a target="blank" href="https://twitter.com/mitafricans/">
+          <a target="_blank" href="https://twitter.com/mitafricans/" rel="noreferrer">
             <FontAwesomeIcon icon={faTwitterSquare} />
           </a>
         </span>

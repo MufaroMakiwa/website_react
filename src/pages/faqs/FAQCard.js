@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const FAQCard = (props) => {
+  const { question, answer, url_text, url, text_after } = props;
 
   const [open, setOpen] = useState(false);
 
@@ -11,10 +12,27 @@ const FAQCard = (props) => {
     setOpen(prevState => !prevState)
   }
 
+  const getAnswerText = () => {
+    if (url_text) {
+      return (
+        <p>
+          {answer}{" "}
+          <a href={url} target="_blank" rel="noreferrer">{url_text}</a>{text_after}
+        </p>
+      )
+    }
+
+    return (
+      <p>
+        {answer}{text_after}
+      </p>
+    )
+  }
+
   return (
     <div className={`faq-card-container ${open ? "open" : ""}`}>
       <div className="faq-card-summary" onClick={toggleContent}>
-        <span>This is the question and it is very long. I am scared it is not going to fit  but I will try</span>
+        <span>{question}</span>
         <div className="faq-card-icon-container">
           <FontAwesomeIcon
             icon={faChevronDown}
@@ -23,11 +41,7 @@ const FAQCard = (props) => {
       </div>
 
       <div className="faq-card-content">
-        <p>
-          This is just to see how this is going to behave. To be honest I do not know
-          what exactly is going to happen but I just hope this manages to work so
-          that I can be happy and not have to spend the whole day working on it.
-        </p>
+        {getAnswerText()}
       </div>
     </div>
   )
