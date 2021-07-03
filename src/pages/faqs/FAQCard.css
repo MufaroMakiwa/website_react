@@ -1,6 +1,5 @@
 .faq-card-container {
   margin: 1rem;
-  overflow: hidden;
   border-radius: 0.2rem;
   border: 1px solid var(--color-black-alpha-020);
 }
@@ -28,7 +27,7 @@
   padding: 1rem 0.5rem 1rem 1rem;
   background-color: var(--color-black-alpha-005);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .faq-card-summary:hover {
@@ -52,6 +51,7 @@
 
 .faq-card-icon {
   color: var(--color-red);
+  transition: all 0.5s ease;
 }
 
 .faq-card-container.open .faq-card-icon {
@@ -59,41 +59,16 @@
 }
 
 .faq-card-content {
-  display: none;
   text-align: justify;
   text-justify: inter-word;
   padding: 0 1rem;
-}
-
-.faq-card-container.open .faq-card-content {
-  display: flex;
-  -webkit-animation: sweep-in 0.5s ease-in-out;
-  -moz-animation: sweep-in 0.5s ease-in-out;
-  -ms-animation: sweep-in 0.5s ease-in-out;
-  -o-animation: sweep-in 0.5s ease-in-out;
-  animation: sweep-in 0.5s ease-in-out;
-
-  -webkit-animation-fill-mode: forwards;  
-  -moz-animation-fill-mode: forwards;  
-  -ms-animation-fill-mode: forwards;  
-  -o-animation-fill-mode: forwards;  
-  animation-fill-mode: forwards; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
 .faq-card-content p {
   margin-top: 1rem;
-}
-
-@keyframes sweep-in {
-  from {
-    opacity: 0; 
-    margin-top: -10px;
-  }
-
-  to {
-    opacity: 1; 
-    margin-top: 0;
-  }
 }
 
 @media (min-width: 768px) {

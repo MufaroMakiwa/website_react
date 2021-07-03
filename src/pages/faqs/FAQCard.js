@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./FAQCard.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -7,8 +7,15 @@ const FAQCard = (props) => {
   const { question, answer, url_text, url, text_after } = props;
 
   const [open, setOpen] = useState(false);
+  const contentRef = useRef();
 
   const toggleContent = () => {
+    if (!open) {
+      const height = contentRef.current.scrollHeight;
+      contentRef.current.style.maxHeight = `${height}px`
+    } else {
+      contentRef.current.style.maxHeight = `${0}px`
+    }
     setOpen(prevState => !prevState)
   }
 
@@ -40,7 +47,7 @@ const FAQCard = (props) => {
         </div>
       </div>
 
-      <div className="faq-card-content">
+      <div className="faq-card-content" ref={contentRef}>
         {getAnswerText()}
       </div>
     </div>
