@@ -11,8 +11,15 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ExecMemberCard = (props) => {
   const {
-    name, position, city_origin, country_origin, course_name,
-    course_number, linkedin, facebook, instagram, email } = props;
+    name, position, city_origin, country_origin,
+    majors, linkedin, facebook, instagram, email } = props;
+
+
+  const getMajors = () => {
+    return majors.map((major) => (
+      <span key={major.key}>{major.major}</span>
+    ));
+  }
 
   return (
     <div className="exec-member-card-container">
@@ -23,11 +30,13 @@ const ExecMemberCard = (props) => {
         <div className="exec-member-details">
 
           <div className="exec-member-name-origin-container">
-            <h3>{name}</h3>
+            <h4>{name}</h4>
             <span className="exec-member-origin">({city_origin}, {country_origin})</span>
           </div>
 
-          <span>{course_name} ({course_number})</span>
+          <div className="exec-member-majors-container">
+            {getMajors()}
+          </div>
 
           <div className="exec-member-links-container">
             {facebook && (
@@ -65,7 +74,7 @@ const ExecMemberCard = (props) => {
 
 
           <div className="exec-member-role-container">
-            <h4>Webmaster</h4>
+            <h6>{position}</h6>
           </div>
 
         </div>

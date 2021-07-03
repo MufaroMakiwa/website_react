@@ -14,8 +14,7 @@ const AboutUs = ({ setActiveAnPageTitle }) => {
         position={execMember.position}
         city_origin={execMember.city_origin}
         country_origin={execMember.country_origin}
-        course_name={execMember.course_name}
-        course_number={execMember.course_number}
+        majors={execMember.majors}
         linkedin={execMember.linkedin}
         facebook={execMember.facebook}
         email={execMember.email}

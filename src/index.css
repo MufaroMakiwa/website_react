@@ -209,24 +209,24 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
 }
 
 h2 {
-  font-size: 1.65rem;
+  font-size: 1.6rem;
 }
 
 h3 {
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 
 h4 {
-  font-size: 1.45rem;
+  font-size: 1.4rem;
 }
 
 h5 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-style: oblique;
 }
 
@@ -234,7 +234,11 @@ h6 {
   font-size: 1.25rem;
 }
 
-.page-content span, .page-content div, .page-content {
+.page-content span {
+  font-size: 0.95rem;
+}
+
+.page-content div, .page-content {
   font-size: 1.1rem;
 }
 
@@ -242,6 +246,58 @@ h6 {
   .page-content {
     max-width: 100%;
     padding: 1rem 1.5rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .page-content span {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.80rem;
+  }
+
+  h2 {
+    font-size: 1.70rem;
+  }
+
+  h3 {
+    font-size: 1.60rem;
+  }
+
+  h4 {
+    font-size: 1.50rem;
+  }
+
+  h5 {
+    font-size: 1.40rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .page-content span {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.90rem;
+  }
+
+  h2 {
+    font-size: 1.80rem;
+  }
+
+  h3 {
+    font-size: 1.70rem;
+  }
+
+  h4 {
+    font-size: 1.60rem;
+  }
+
+  h5 {
+    font-size: 1.50rem;
   }
 }
 
@@ -272,10 +328,6 @@ h6 {
 
   h5 {
     font-size: 1.60rem;
-  }
-
-  h6 {
-    font-size: 1.50rem;
   }
 }
 
