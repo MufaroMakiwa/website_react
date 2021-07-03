@@ -11,6 +11,7 @@
   --color-red: rgba(152, 38, 53, 1.0);
   --color-red-transparent: rgba(152, 38, 53, 0.975);
   --color-red-light: rgba(227, 145, 156, 1.0);
+  --color-red-lighter: rgb(226, 225, 225);
   --color-error: rgba(255, 80, 61, 1.0);
   --color-error-light: rgba(255, 149, 138, 1.0);
   --color-black: rgba(0, 0, 0, 1.0);
@@ -41,6 +42,7 @@
   --color-white-alpha-080: rgba(255, 255, 255, 0.80);
   --color-white-alpha-090: rgba(255, 255, 255, 0.90);
   --color-facebook: rgba(59, 89, 152, 1.0);
+  --color-linkedin: rgba(1, 119, 181, 1.0);
   --color-twitter: rgba(0, 172, 237, 1.0);
   --color-instagram: rgba(251, 57, 88, 1.0);
   --color-medium: rgba(26, 167, 125, 1.0);
@@ -235,7 +237,6 @@ h6 {
 .page-content span, .page-content div, .page-content {
   font-size: 1.1rem;
 }
-
 
 @media (max-width: 599px) {
   .page-content {

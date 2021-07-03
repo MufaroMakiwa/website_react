@@ -4,8 +4,20 @@
   padding: 0.5rem;
 }
 
+.about-us-exec-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 @media (min-width: 600px) {
   .about-us-container {
     padding: 1rem;
+  }
+
+  .about-us-exec-container {
+    margin-top: 2rem;
   }
 }

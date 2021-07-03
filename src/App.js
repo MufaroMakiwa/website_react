@@ -54,7 +54,6 @@ const App = () => {
 
 
   useEffect(() => {
-    console.log("Page title use effect");
     document.title = "MIT Africans | " + pageTitle;
   }, [active, pageTitle])
 

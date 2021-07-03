@@ -1,7 +1,27 @@
 import React, { useEffect } from "react";
-import "./AboutUs.css"
+import "./AboutUs.css";
+import ExecMemberCard from "./ExecMemberCard";
+import { exec_members } from "../../data/data-exec-members";
+
 
 const AboutUs = ({ setActiveAnPageTitle }) => {
+
+  const getExecMembersCardObjects = () => {
+    return exec_members.map((execMember) => (
+      <ExecMemberCard
+        key={execMember.key}
+        name={execMember.name}
+        position={execMember.position}
+        city_origin={execMember.city_origin}
+        country_origin={execMember.country_origin}
+        course_name={execMember.course_name}
+        course_number={execMember.course_number}
+        linkedin={execMember.linkedin}
+        facebook={execMember.facebook}
+        email={execMember.email}
+        instagram={execMember.instagram} />
+    ))
+  }
 
   useEffect(() => {
     setActiveAnPageTitle("about-us", "About Us")
@@ -27,6 +47,9 @@ const AboutUs = ({ setActiveAnPageTitle }) => {
             lifestyle, and to present Africa from the African perspective.
           </p>
           <h1>Our Team</h1>
+          <div className="about-us-exec-container">
+            {getExecMembersCardObjects()}
+          </div>
         </div>
       </div>
     </div>

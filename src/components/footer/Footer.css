@@ -35,43 +35,42 @@
   margin: 1rem auto 1rem auto;
 }
 
-.footer-social-media > * {
+.footer-footer > * {
   transition: all 0.3s;
 }
 
-.footer-social-media-icon {
+.footer-icon {
   font-size: 2.25rem;
   text-align: center;
   padding: 0 0.2rem;
 }
 
-
-.footer-social-media-icon a {
+.footer-icon a {
   text-decoration: none;
 }
 
-.footer-social-media-icon a svg {
+.footer-icon a svg {
   color: white;
   margin: 0 0.75rem;
 }
 
-.footer-social-media-icon.facebook:hover * *, 
-.footer-social-media-icon.facebook a:hover * * {
+.footer-icon.facebook:hover * *, 
+.footer-icon.facebook a:hover * * {
   fill: var(--color-facebook);
 }
 
-.footer-social-media-icon.instagram:hover * *, 
-.footer-social-media-icon.instagram a:hover * * {
+.footer-icon.instagram:hover * *, 
+.footer-icon.instagram a:hover * * {
   fill: var(--color-instagram);
 }
 
-.footer-social-media-icon.medium:hover * *, 
-.footer-social-media-icon.medium a:hover * * {
+.footer-icon.medium:hover * *, 
+.footer-icon.medium a:hover * * {
   fill: var(--color-medium);
 }
 
-.footer-social-media-icon.twitter:hover * *, 
-.footer-social-media-icon.twitter a:hover * * {
+.footer-icon.twitter:hover * *, 
+.footer-icon.twitter a:hover * * {
   fill: var(--color-twitter);
 }
 
@@ -95,7 +94,7 @@
 }
 
 @media (min-width: 768px) {
-  .footer-social-media-icon a svg {
+  .footer-icon a svg {
     margin: 0 1rem;
   }
 }

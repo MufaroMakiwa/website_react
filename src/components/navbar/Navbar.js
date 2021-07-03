@@ -123,7 +123,7 @@ const Navbar = ({ active, navbarRef, headerRef }) => {
           <span>FAQs</span>
         </li>
       </ul>
-      <div className="navbar-modal" onClick={closeMenu} onWheel={() => console.log("Scrolling")}></div>
+      <div className="navbar-modal" onClick={closeMenu}></div>
     </div>
   )
 }
