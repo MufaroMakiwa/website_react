@@ -180,4 +180,8 @@
     color: white;
     border-bottom: 3px solid white;
   }
+
+  .navbar-toggler {
+    background-color: var(--color-white-alpha-020);
+  }
 }

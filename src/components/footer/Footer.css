@@ -35,11 +35,16 @@
   margin: 1rem auto 1rem auto;
 }
 
+.footer-social-media > * {
+  transition: all 0.3s;
+}
+
 .footer-social-media-icon {
   font-size: 2.25rem;
   text-align: center;
   padding: 0 0.2rem;
 }
+
 
 .footer-social-media-icon a {
   text-decoration: none;

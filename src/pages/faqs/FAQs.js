@@ -5,10 +5,6 @@ import { faqs } from "./data-faq";
 
 const FAQs = ({ setActiveAnPageTitle }) => {
 
-  useEffect(() => {
-    setActiveAnPageTitle("faqs", "Frequently Asked Questions")
-  })
-
   const getFAQCardObjects = () => {
     return faqs.map((faq) => (
       <FAQCard
@@ -20,6 +16,10 @@ const FAQs = ({ setActiveAnPageTitle }) => {
         text_after={faq.text_after} />
     ))
   }
+
+  useEffect(() => {
+    setActiveAnPageTitle("faqs", "Frequently Asked Questions")
+  })
 
   return (
     <div className="page-container">

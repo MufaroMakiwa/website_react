@@ -13,37 +13,39 @@ const Home = ({ setActiveAnPageTitle }) => {
   return (
     <div className="page-container">
       <div className="page-content">
-        <p>
-          We are a diverse community of Africans and friends of Africa at
-          Massachusetts Institute of Technology.
-        </p>
-        <div className="image-soft-edges">
-          <img src={CoverPhoto} alt="Cover" />
+        <div className="home-container">
+          <p>
+            We are a diverse community of Africans and friends of Africa at
+            Massachusetts Institute of Technology.
+          </p>
+          <div className="image-soft-edges">
+            <img src={CoverPhoto} alt="Cover" />
+          </div>
+          <h2>Events on Facebook</h2>
+          <p>Stay up to date with our events on{" "}
+            <a href="https://www.facebook.com/pg/mitafricans/events/" target="_blank" rel="noreferrer">Facebook</a>.
+          </p>
+          <h2>Medium Blog</h2>
+          <p>
+            We encourage Africans to share their experience through our{" "}
+            <a href="https://medium.com/mitafricans" target="_blank" rel="noreferrer">medium
+              publication blog</a>.
+          </p>
+          <h2>African Learning Circle (ALC)</h2>
+          <p>
+            <a href="http://talkingdrum.mit.edu/" target="_blank" rel="noreferrer">The Africa Learning Circle (ALC)</a>{" "}
+            is the academic and
+            innovation branch of the MIT African Students Association setup to
+            strengthen the spirit and
+            culture of innovation, principled entrepreneurship and vigorous study of
+            the African
+            continent's past, present and future. Its mission is to create a platform
+            that equips our
+            community to put it's powerful ideas into hands-on innovation, in line
+            with the MIT mind and
+            hand motto.
+          </p>
         </div>
-        <h2>Events on Facebook</h2>
-        <p>Stay up to date with our events on{" "}
-          <a href="https://www.facebook.com/pg/mitafricans/events/">Facebook</a>.
-        </p>
-        <h2>Medium Blog</h2>
-        <p>
-          We encourage Africans to share their experience through our{" "}
-          <a href="https://medium.com/mitafricans" target="_blank" rel="noreferrer">medium
-            publication blog</a>.
-        </p>
-        <h2>African Learning Circle (ALC)</h2>
-        <p>
-          <a href="http://talkingdrum.mit.edu/">The Africa Learning Circle (ALC)</a>{" "}
-          is the academic and
-          innovation branch of the MIT African Students Association setup to
-          strengthen the spirit and
-          culture of innovation, principled entrepreneurship and vigorous study of
-          the African
-          continent's past, present and future. Its mission is to create a platform
-          that equips our
-          community to put it's powerful ideas into hands-on innovation, in line
-          with the MIT mind and
-          hand motto.
-        </p>
       </div>
     </div>
   )

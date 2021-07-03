@@ -96,18 +96,6 @@
   }
 }
 
-@keyframes sweep-out {
-  from {
-    opacity: 1; 
-    margin-top: 0;
-  }
-
-  to {
-    opacity: 0; 
-    margin-top: -10px;
-  }
-}
-
 @media (min-width: 768px) {
   .faq-card-container {
     margin: 2rem;
