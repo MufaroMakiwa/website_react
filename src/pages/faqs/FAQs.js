@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./FAQs.css";
 import FAQCard from "./FAQCard";
-import { faqs } from "./data-faq";
+import { faqs } from "../../data/data-faq";
 
 const FAQs = ({ setActiveAnPageTitle }) => {
 

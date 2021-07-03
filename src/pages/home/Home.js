@@ -18,7 +18,7 @@ const Home = ({ setActiveAnPageTitle }) => {
             We are a diverse community of Africans and friends of Africa at
             Massachusetts Institute of Technology.
           </p>
-          <div className="image-soft-edges">
+          <div className="image-soft-edges home-cover-photo">
             <img src={CoverPhoto} alt="Cover" />
           </div>
           <h2>Events on Facebook</h2>

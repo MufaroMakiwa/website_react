@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Resources.css";
 import ResourcesCard from "./ResourcesCard";
-import { resources } from "./data-resources";
+import { resources } from "../../data/data-resources";
 
 
 const Resources = ({ setActiveAnPageTitle }) => {
