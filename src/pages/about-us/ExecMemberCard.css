@@ -83,6 +83,10 @@
   justify-content: center;
 }
 
+.exec-member-majors-container span i {
+  font-weight: 100;
+}
+
 .exec-member-links-container {
   margin-top: 1rem;
   display: flex;
@@ -116,6 +120,7 @@
   height: 2rem;
 }
 
+.exec-member-card-inner,
 .exec-member-links-container .icon a svg:hover {
   -webkit-box-shadow: 0 0 0.4rem var(--color-box-shadow-dark);
   -moz-box-shadow: 0 0 0.4rem var(--color-box-shadow-dark);

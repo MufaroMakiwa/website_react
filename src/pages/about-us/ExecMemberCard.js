@@ -17,7 +17,9 @@ const ExecMemberCard = (props) => {
 
   const getMajors = () => {
     return majors.map((major) => (
-      <span key={major.key}>{major.major}</span>
+      <span key={major.key}>
+        {major.course_name} <i>({major.course_number})</i>
+      </span>
     ));
   }
 
