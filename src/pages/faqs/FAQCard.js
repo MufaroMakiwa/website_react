@@ -24,7 +24,7 @@ const FAQCard = (props) => {
       return (
         <p>
           {answer}{" "}
-          <a href={url} target="_blank" rel="noreferrer">{url_text}</a>{text_after}
+          <a href={url} target="_blank" rel="noreferrer noopener">{url_text}</a>{text_after}
         </p>
       )
     }

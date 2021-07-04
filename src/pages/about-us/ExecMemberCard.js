@@ -44,7 +44,7 @@ const ExecMemberCard = (props) => {
           <div className="exec-member-links-container">
             {facebook && (
               <span className="icon facebook">
-                <a target="_blank" href={facebook} rel="noreferrer">
+                <a target="_blank" href={facebook} rel="noreferrer noopener">
                   <FontAwesomeIcon icon={faFacebookSquare} />
                 </a>
               </span>
@@ -52,7 +52,7 @@ const ExecMemberCard = (props) => {
 
             {linkedin && (
               <span className="icon linkedin">
-                <a target="_blank" href={linkedin} rel="noreferrer">
+                <a target="_blank" href={linkedin} rel="noreferrer noopener">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </span>
@@ -60,7 +60,7 @@ const ExecMemberCard = (props) => {
 
             {instagram && (
               <span className="icon instagram">
-                <a target="_blank" href={instagram} rel="noreferrer">
+                <a target="_blank" href={instagram} rel="noreferrer noopener">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </span>
@@ -68,7 +68,7 @@ const ExecMemberCard = (props) => {
 
             {email && (
               <span className="icon email">
-                <a target="_blank" href={`mailto:${email}`} rel="noreferrer">
+                <a target="_blank" href={`mailto:${email}`} rel="noreferrer noopener">
                   <FontAwesomeIcon icon={faEnvelopeSquare} />
                 </a>
               </span>

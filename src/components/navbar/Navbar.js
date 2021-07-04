@@ -115,7 +115,7 @@ const Navbar = ({ active, navbarRef, headerRef }) => {
           <span>Resources</span>
         </li>
         <li>
-          <a target="_blank" href="https://www.facebook.com/pg/mitafricans/events/" rel="noreferrer">Events</a>
+          <a target="_blank" href="https://www.facebook.com/pg/mitafricans/events/" rel="noreferrer noopener">Events</a>
         </li>
         <li
           className={active === "faqs" ? "active" : ""}

@@ -22,17 +22,17 @@ const Home = ({ setActiveAnPageTitle }) => {
           </div>
           <h2>Events on Facebook</h2>
           <p>Stay up to date with our events on{" "}
-            <a href="https://www.facebook.com/pg/mitafricans/events/" target="_blank" rel="noreferrer">Facebook</a>.
+            <a href="https://www.facebook.com/pg/mitafricans/events/" target="_blank" rel="noreferrer noopener">Facebook</a>.
           </p>
           <h2>Medium Blog</h2>
           <p>
             We encourage Africans to share their experience through our{" "}
-            <a href="https://medium.com/mitafricans" target="_blank" rel="noreferrer">medium
+            <a href="https://medium.com/mitafricans" target="_blank" rel="noreferrer noopener">medium
               publication blog</a>.
           </p>
           <h2>African Learning Circle (ALC)</h2>
           <p>
-            <a href="http://talkingdrum.mit.edu/" target="_blank" rel="noreferrer">The Africa Learning Circle (ALC)</a>{" "}
+            <a href="http://talkingdrum.mit.edu/" target="_blank" rel="noreferrer noopener">The Africa Learning Circle (ALC)</a>{" "}
             is the academic and
             innovation branch of the MIT African Students Association setup to
             strengthen the spirit and
