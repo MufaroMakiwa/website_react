@@ -16,6 +16,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import PageTitle from "./components/page_title/PageTitle";
 import Navbar from "./components/navbar/Navbar";
+import Loading from "./components/loading/Loading";
+
 
 
 
@@ -31,6 +33,7 @@ const App = () => {
   const navbarRef = useRef();
 
   // to add loading and a loading page. To also update this this loading after images are done loading
+  const [loading, setLoading] = useState(false);
 
   const ensureNavbarStickyAfterHeaderHeightScroll = () => {
     if (window.pageYOffset > headerRef.current.scrollHeight) {
@@ -57,6 +60,9 @@ const App = () => {
     document.title = "MIT Africans | " + pageTitle;
   }, [active, pageTitle])
 
+  if (loading) {
+    return (<Loading />)
+  }
 
   return (
     <div className="app-container">

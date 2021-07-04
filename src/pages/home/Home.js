@@ -3,7 +3,6 @@ import "./Home.css";
 import CoverPhoto from "../../assets/cover_photo.jpg";
 
 
-
 const Home = ({ setActiveAnPageTitle }) => {
 
   useEffect(() => {

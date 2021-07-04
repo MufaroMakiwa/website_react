@@ -7,6 +7,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../../assets/logo.png";
 
 
 const ExecMemberCard = (props) => {
@@ -27,10 +28,10 @@ const ExecMemberCard = (props) => {
     <div className="exec-member-card-container">
       <div className="exec-member-card-inner">
         <div className="exec-member-photo-container">
+          <img src={Logo} alt="Exec Member" />
         </div>
 
         <div className="exec-member-details">
-
           <div className="exec-member-name-origin-container">
             <h4>{name}</h4>
             <span className="exec-member-origin">({city_origin}, {country_origin})</span>
@@ -74,11 +75,9 @@ const ExecMemberCard = (props) => {
             )}
           </div>
 
-
           <div className="exec-member-role-container">
             <h6>{position}</h6>
           </div>
-
         </div>
       </div>
     </div>
