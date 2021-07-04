@@ -1,3 +1,11 @@
+import Delight from "../assets/photo_delight.jpg";
+import Gianna from "../assets/photo_gianna.jpg";
+import Michael from "../assets/photo_michael.png";
+import Mojo from "../assets/photo_mojo.jpg";
+import Mufaro from "../assets/photo_mufaro.jpg";
+import Sharon from "../assets/photo_sharon.jpg";
+
+
 export const exec_members = [
   {
     key: 0,
@@ -16,7 +24,7 @@ export const exec_members = [
     facebook: "https://www.facebook.com/sharon.oparandudu/",
     instagram: null,
     email: "sopara@mit.edu",
-    photo: null,
+    photo: Sharon,
   },
   {
     key: 1,
@@ -46,19 +54,20 @@ export const exec_members = [
     key: 2,
     name: "Gianna Torpey",
     position: "Secretary",
-    city_origin: null,
+    city_origin: "Tema",
     country_origin: "Ghana",
     majors: [
       {
         key: 0,
-        major: null
+        course_name: "Computer Science and Engineering",
+        course_number: "6-3"
       }
     ],
     linkedin: "https://www.linkedin.com/in/gianna-torpey-825214187/",
     facebook: "https://www.facebook.com/gianna.torpey",
     instagram: null,
     email: "gtorpey@mit.edu",
-    photo: null,
+    photo: Gianna,
   },
   {
     key: 3,
@@ -96,25 +105,26 @@ export const exec_members = [
     facebook: "https://www.facebook.com/MufaroMakiwa/",
     instagram: null,
     email: "mmakiwa@mit.edu",
-    photo: null,
+    photo: Mufaro,
   },
   {
     key: 5,
     name: "Mojolaoluwa Oke",
     position: "Freshman Outreach Chair",
-    city_origin: null,
+    city_origin: "Ibadan",
     country_origin: "Nigeria",
     majors: [
       {
         key: 0,
-        major: null
+        course_name: "Mechanical Engineering",
+        course_number: "2",
       }
     ],
     linkedin: "https://www.linkedin.com/in/mojolaoluwa-oke/",
     facebook: "https://www.facebook.com/mojolaoluwa.o",
-    instagram: null,
+    instagram: "https://www.instagram.com/mojolaoluwa.o/",
     email: "mooke@mit.edu",
-    photo: null,
+    photo: Mojo,
   },
   {
     key: 6,
@@ -133,7 +143,7 @@ export const exec_members = [
     facebook: "https://www.facebook.com/profile.php?id=100018076676057",
     instagram: "https://www.instagram.com/the_michael_hanson/",
     email: "mkhanson@mit.edu",
-    photo: null,
+    photo: Michael,
   },
   {
     key: 7,
@@ -169,7 +179,7 @@ export const exec_members = [
     facebook: "https://www.facebook.com/DeDe.Delight",
     instagram: null,
     email: "delightn@mit.edu",
-    photo: null,
+    photo: Delight,
   },
   {
     key: 9,

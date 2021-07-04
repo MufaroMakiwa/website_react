@@ -12,6 +12,7 @@ const AboutUs = ({ setActiveAnPageTitle }) => {
         key={execMember.key}
         name={execMember.name}
         position={execMember.position}
+        photo={execMember.photo}
         city_origin={execMember.city_origin}
         country_origin={execMember.country_origin}
         majors={execMember.majors}

@@ -12,7 +12,7 @@ import Logo from "../../assets/logo.png";
 
 const ExecMemberCard = (props) => {
   const {
-    name, position, city_origin, country_origin,
+    name, position, photo, city_origin, country_origin,
     majors, linkedin, facebook, instagram, email } = props;
 
 
@@ -28,7 +28,11 @@ const ExecMemberCard = (props) => {
     <div className="exec-member-card-container">
       <div className="exec-member-card-inner">
         <div className="exec-member-photo-container">
-          <img src={Logo} alt="Exec Member" />
+          {photo ? (
+            <img src={photo} alt="Exec Member" />
+          ) : (
+            <img src={Logo} alt="Exec Member" />
+          )}
         </div>
 
         <div className="exec-member-details">
