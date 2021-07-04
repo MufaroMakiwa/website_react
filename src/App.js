@@ -68,7 +68,7 @@ const App = () => {
     <div className="app-container">
       <Router>
         <Header headerRef={headerRef} />
-        <Navbar active={active} navbarRef={navbarRef} headerRef={headerRef} />
+        <Navbar active={active} navbarRef={navbarRef} />
         <PageTitle title={pageTitle} pageTitleRef={pageTitleRef} />
         <Switch>
           <Route

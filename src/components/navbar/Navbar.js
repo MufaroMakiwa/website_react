@@ -5,7 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 
-const Navbar = ({ active, navbarRef, headerRef }) => {
+const Navbar = ({ active, navbarRef }) => {
   // to toggle the collapsed menu
   const [displayMenu, setDisplayMenu] = useState(false);
 
@@ -29,11 +29,9 @@ const Navbar = ({ active, navbarRef, headerRef }) => {
       closeMenuAndEnableBodyScrolling();
       setDisplayMenu(false);
     }
+    window.scrollTo(0, 0);
     if (selected === active) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      history.go(0);
     } else {
       history.push("/" + selected)
     }
