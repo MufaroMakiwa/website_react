@@ -30,7 +30,10 @@ const Navbar = ({ active, navbarRef, headerRef }) => {
       setDisplayMenu(false);
     }
     if (selected === active) {
-      history.go(0)
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     } else {
       history.push("/" + selected)
     }
