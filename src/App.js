@@ -45,6 +45,10 @@ const App = () => {
     }
   }
 
+  const scrollTopOnReload = () => {
+    window.scrollTo(0, 0);
+  }
+
   const setActiveAnPageTitle = (active, pageTitle) => {
     setActive(active);
     setPageTitle(pageTitle);
@@ -53,6 +57,11 @@ const App = () => {
   useEffect(() => {
     window.addEventListener("scroll", ensureNavbarStickyAfterHeaderHeightScroll);
     return () => window.removeEventListener("scroll", ensureNavbarStickyAfterHeaderHeightScroll);
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", scrollTopOnReload);
+    return () => window.removeEventListener("beforeunload", scrollTopOnReload);
   }, [])
 
 
