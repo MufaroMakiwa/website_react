@@ -26,24 +26,25 @@ const Navbar = ({ active, navbarRef }) => {
   const navigateToPage = (selected) => {
     // close the side menu if it is open
     if (displayMenu) {
-      closeMenuAndEnableBodyScrolling();
-      setDisplayMenu(false);
+      closeMenu()
     }
-    if (selected === active) {
-      window.scrollTo(0, 0);
-    } else {
-      history.push("/" + selected)
-    }
+    setTimeout(() => {
+      if (selected === active) {
+        window.scrollTo(0, 0);
+      } else {
+        history.push("/" + selected)
+      }
+    }, 250);
   }
 
   const openMenu = () => {
-    openMenuAndDisableBodyScrolling();
     setDisplayMenu(true);
+    openMenuAndDisableBodyScrolling();
   }
 
   const closeMenu = () => {
-    closeMenuAndEnableBodyScrolling();
     setDisplayMenu(false);
+    closeMenuAndEnableBodyScrolling();
   }
 
   const ensureSideMenuClosedAboveXsWindowWidth = () => {
