@@ -34,7 +34,7 @@ const Navbar = ({ active, navbarRef }) => {
       } else {
         history.push("/" + selected)
       }
-    }, 250);
+    }, 300);
   }
 
   const openMenu = () => {
