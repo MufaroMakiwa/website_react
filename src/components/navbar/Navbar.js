@@ -30,7 +30,7 @@ const Navbar = ({ active, navbarRef }) => {
       setDisplayMenu(false);
     }
     if (selected === active) {
-      history.go(0);
+      window.scrollTo(0, 0);
     } else {
       history.push("/" + selected)
     }

@@ -33,7 +33,7 @@ const FAQs = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
   useEffect(() => {
     document.title = "MIT Africans | " + pageTitle;
     window.scrollTo(0, 0);
-  })
+  }, [])
 
   useEffect(() => {
     let timer = setTimeout(() => {
