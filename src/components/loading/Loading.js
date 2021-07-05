@@ -6,7 +6,6 @@ const Loading = ({ loading }) => {
   const loadingRef = useRef();
 
   const removeFromDom = () => {
-    console.log("Removing from dom")
     loadingRef.current.classList.add("hidden");
   }
 

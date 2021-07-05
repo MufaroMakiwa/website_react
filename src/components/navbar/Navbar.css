@@ -94,7 +94,6 @@
     padding: 1rem;
     border-left: 4px solid white;
     z-index: var(--z-index-level-1st);
-    overflow-y: scroll;
   }
 
   .open-side-menu.navbar-container ul {
