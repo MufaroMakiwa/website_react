@@ -4,7 +4,7 @@ export const resources = [
     title: "Survival Tips for Freshmen",
     url: "https://docs.google.com/document/d/1zjgTtgoGUyceXZ0h6-w9IAPonAivJi9gnz9NPFfWoa0/edit?usp=sharing",
     url_text: "Google Doc File",
-    content: "The ASA along with other Africans at MIT have devised a \"wiki\" of useful tips and tricks that can help new Students from Africa navigating Boston and MIT better."
+    content: "The ASA along with other Africans at MIT have devised a \"wiki\" of useful tips and tricks that can help new Students from Africa navigate Boston and MIT better."
   },
   {
     key: 1,

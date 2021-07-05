@@ -29,7 +29,6 @@ const Navbar = ({ active, navbarRef }) => {
       closeMenuAndEnableBodyScrolling();
       setDisplayMenu(false);
     }
-    window.scrollTo(0, 0);
     if (selected === active) {
       history.go(0);
     } else {

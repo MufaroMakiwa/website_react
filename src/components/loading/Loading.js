@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Loading.css";
 
-const Loading = () => {
-  return (
-    <div className="loading-container">
-      <div className="loading-image-container">
+const Loading = ({ loading }) => {
 
-      </div>
+  const loadingRef = useRef();
+
+  const removeFromDom = () => {
+    console.log("Removing from dom")
+    loadingRef.current.classList.add("hidden");
+  }
+
+  useEffect(() => {
+    if (!loading) {
+      loadingRef.current.classList.add("visually-hidden");
+      loadingRef.current.addEventListener("transitionend", removeFromDom);
+    }
+  }, [loading])
+
+  return (
+    <div className="loading-container" ref={loadingRef}>
+      <div className="loading-image-container"></div>
     </div>
   )
 }

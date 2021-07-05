@@ -119,6 +119,10 @@ a {
   z-index: var(--z-index-level-ground);
 }
 
+.page-loading {
+  overflow: hidden;
+}
+
 .page-content {
   background-color: white;
   max-width: 77.5%;
