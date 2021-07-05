@@ -1,14 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./FAQs.css";
 import FAQCard from "./FAQCard";
 import { faqs } from "../../data/data-faq";
 
 const FAQs = ({ setActiveAnPageTitle }) => {
 
+  const [openId, setOpenId] = useState(null);
+
   const getFAQCardObjects = () => {
     return faqs.map((faq) => (
       <FAQCard
         key={faq.key}
+        id={faq.key}
+        openId={openId}
+        setOpenId={setOpenId}
         question={faq.question}
         answer={faq.answer}
         url_text={faq.url_text}

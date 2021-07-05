@@ -1,23 +1,33 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./FAQCard.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const FAQCard = (props) => {
-  const { question, answer, url_text, url, text_after } = props;
+  const { question, id, openId, setOpenId, answer, url_text, url, text_after } = props;
 
   const [open, setOpen] = useState(false);
   const contentRef = useRef();
 
   const toggleContent = () => {
     if (!open) {
-      const height = contentRef.current.scrollHeight;
-      contentRef.current.style.maxHeight = `${height}px`
+      setOpenId(id);
+      setOpen(true);
     } else {
-      contentRef.current.style.maxHeight = `${0}px`
+      setOpenId(null);
+      setOpen(false);
     }
-    setOpen(prevState => !prevState)
   }
+
+  useEffect(() => {
+    if (openId === id) {
+      const height = contentRef.current.scrollHeight;
+      contentRef.current.style.maxHeight = `${height}px`;
+    } else {
+      contentRef.current.style.maxHeight = `${0}px`;
+      if (open) setOpen(false);
+    }
+  }, [openId])
 
   const getAnswerText = () => {
     if (url_text) {
@@ -28,7 +38,6 @@ const FAQCard = (props) => {
         </p>
       )
     }
-
     return (
       <p>
         {answer}{text_after}
