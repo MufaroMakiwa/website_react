@@ -84,7 +84,7 @@ const Navbar = ({ active, navbarRef }) => {
     <div
       className="main-container navbar-container"
       ref={navbarRef}>
-      <div className="navbar-title-on-xs-screen">
+      <div className="navbar-title-on-xs-screen" onClick={() => window.scrollTo(0, 0)}>
         <span>{getNavBarTitle()}</span>
       </div>
 
