@@ -4,6 +4,7 @@ import Michael from "../assets/photo_michael.png";
 import Mojo from "../assets/photo_mojo.jpg";
 import Mufaro from "../assets/photo_mufaro.jpg";
 import Sharon from "../assets/photo_sharon.jpg";
+import Ayo from "../assets/photo_ayo.jpg";
 
 
 export const exec_members = [
@@ -48,7 +49,7 @@ export const exec_members = [
     facebook: "https://www.facebook.com/ayomikun.ayodeji.54/",
     instagram: null,
     email: "ayomikun@mit.edu",
-    photo: null,
+    photo: Ayo,
   },
   {
     key: 2,
@@ -64,7 +65,7 @@ export const exec_members = [
       }
     ],
     linkedin: "https://www.linkedin.com/in/gianna-torpey-825214187/",
-    facebook: "https://www.facebook.com/gianna.torpey",
+    facebook: "https://www.facebook.com/gianna.torpey/",
     instagram: null,
     email: "gtorpey@mit.edu",
     photo: Gianna,
@@ -121,7 +122,7 @@ export const exec_members = [
       }
     ],
     linkedin: "https://www.linkedin.com/in/mojolaoluwa-oke/",
-    facebook: "https://www.facebook.com/mojolaoluwa.o",
+    facebook: "https://www.facebook.com/mojolaoluwa.o/",
     instagram: "https://www.instagram.com/mojolaoluwa.o/",
     email: "mooke@mit.edu",
     photo: Mojo,
@@ -139,8 +140,8 @@ export const exec_members = [
         course_number: "10-Eng"
       }
     ],
-    linkedin: "https://www.linkedin.com/in/hanson-michael",
-    facebook: "https://www.facebook.com/profile.php?id=100018076676057",
+    linkedin: "https://www.linkedin.com/in/hanson-michael/",
+    facebook: "https://www.facebook.com/profile.php?id=100018076676057/",
     instagram: "https://www.instagram.com/the_michael_hanson/",
     email: "mkhanson@mit.edu",
     photo: Michael,
@@ -154,11 +155,12 @@ export const exec_members = [
     majors: [
       {
         key: 0,
-        major: null
+        course_name: null,
+        course_number: null,
       }
     ],
     linkedin: "https://www.linkedin.com/in/bukunmishodipo19b3241b7/",
-    facebook: "https://www.facebook.com/bukunmi.shodipo.90",
+    facebook: "https://www.facebook.com/bukunmi.shodipo.90/",
     instagram: null,
     email: "bukunmi@mit.edu",
     photo: null,
@@ -167,17 +169,18 @@ export const exec_members = [
     key: 8,
     name: "Delight Nweneka",
     position: "Social Chair",
-    city_origin: null,
-    country_origin: null,
+    city_origin: "Porthacourt",
+    country_origin: "Nigeria",
     majors: [
       {
         key: 0,
-        major: null
+        course_name: "Biological Engineering",
+        course_number: "20"
       }
     ],
     linkedin: "https://www.linkedin.com/in/delight-nweneka-493a66197/",
-    facebook: "https://www.facebook.com/DeDe.Delight",
-    instagram: null,
+    facebook: "https://www.facebook.com/DeDe.Delight/",
+    instagram: "https://www.instagram.com/dede_mi/",
     email: "delightn@mit.edu",
     photo: Delight,
   },
@@ -190,11 +193,12 @@ export const exec_members = [
     majors: [
       {
         key: 0,
-        major: null
+        course_name: null,
+        course_number: null
       }
     ],
     linkedin: null,
-    facebook: "https://www.facebook.com/denzelsegbefia",
+    facebook: "https://www.facebook.com/denzelsegbefia/",
     instagram: null,
     email: "denzel@mit.edu",
     photo: null,
