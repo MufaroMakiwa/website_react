@@ -5,6 +5,7 @@ import Mojo from "../assets/photo_mojo.jpg";
 import Mufaro from "../assets/photo_mufaro.jpg";
 import Sharon from "../assets/photo_sharon.jpg";
 import Ayo from "../assets/photo_ayo.jpg";
+import Bukunmi from "../assets/photo_bukunmi.jpg";
 
 
 export const exec_members = [
@@ -150,20 +151,20 @@ export const exec_members = [
     key: 7,
     name: "Bukunmi Shodipo",
     position: "ALC Co-Chair",
-    city_origin: null,
-    country_origin: null,
+    city_origin: "Lagos",
+    country_origin: "Nigeria",
     majors: [
       {
         key: 0,
-        course_name: null,
-        course_number: null,
+        course_name: "Electrical Engineering and Computer Science",
+        course_number: "6-2",
       }
     ],
     linkedin: "https://www.linkedin.com/in/bukunmishodipo19b3241b7/",
     facebook: "https://www.facebook.com/bukunmi.shodipo.90/",
-    instagram: null,
+    instagram: "https://www.instagram.com/bukunm.i/",
     email: "bukunmi@mit.edu",
-    photo: null,
+    photo: Bukunmi,
   },
   {
     key: 8,
