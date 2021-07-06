@@ -23,18 +23,27 @@ const Navbar = ({ active, navbarRef }) => {
     document.body.classList.remove("no-scroll");
   }
 
+  const navigate = (selected) => {
+    if (selected === active) {
+      window.scrollTo(0, 0);
+    } else {
+      history.push("/" + selected)
+    }
+  }
+
   const navigateToPage = (selected) => {
     // close the side menu if it is open
     if (displayMenu) {
       closeMenu()
     }
-    setTimeout(() => {
-      if (selected === active) {
-        window.scrollTo(0, 0);
-      } else {
-        history.push("/" + selected)
-      }
-    }, 300);
+
+    if (window.innerWidth >= 600) {
+      navigate(selected);
+    } else {
+      setTimeout(() => {
+        navigate(selected);
+      }, 300);
+    }
   }
 
   const openMenu = () => {
