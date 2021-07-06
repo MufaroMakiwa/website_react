@@ -7,7 +7,6 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import PageTitle from "../../components/page_title/PageTitle";
 import Navbar from "../../components/navbar/Navbar";
-import MetaTags from "../../components/meta-tags/MetaTags";
 
 
 const AboutUs = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
@@ -16,6 +15,9 @@ const AboutUs = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
   const [loading, setLoading] = useState(true);
   const pageTitle = "About Us";
   const active = "about-us";
+
+  // update page title
+  document.title = `MIT Africans | ${pageTitle}`;
 
   const getExecMembersCardObjects = () => {
     return exec_members.map((execMember) => (
@@ -55,7 +57,6 @@ const AboutUs = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
 
   return (
     <div className="app-container">
-      <MetaTags pageTitle={pageTitle} />
       <Loading loading={loading} />
       <Header headerRef={headerRef} />
       <Navbar active={active} navbarRef={navbarRef} />
