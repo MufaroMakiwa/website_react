@@ -6,6 +6,7 @@ import Mufaro from "../assets/photo_mufaro.jpg";
 import Sharon from "../assets/photo_sharon.jpg";
 import Ayo from "../assets/photo_ayo.jpg";
 import Bukunmi from "../assets/photo_bukunmi.jpg";
+import Nickie from "../assets/photo_nickie.jpg";
 
 
 export const exec_members = [
@@ -88,7 +89,7 @@ export const exec_members = [
     facebook: "https://www.facebook.com/nickie.mpofu.54/",
     instagram: "https://www.instagram.com/nicki3.zw/",
     email: "nickiemp@mit.edu",
-    photo: null,
+    photo: Nickie,
   },
   {
     key: 4,
