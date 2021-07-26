@@ -15,7 +15,7 @@ import FAQs from "./pages/faqs/FAQs";
 
 const App = () => {
 
-  // references to header and navbar to make navbar sticky on scroll
+  // references to header, navbar and page title to make navbar sticky on scroll
   const headerRef = useRef();
   const pageTitleRef = useRef();
   const navbarRef = useRef();
@@ -31,6 +31,27 @@ const App = () => {
     }
   }
 
+  // when the page is loading, we disable scrolling so that the user is always at the top of the page
+  // when the loading page is removed
+  const togglePageScroll = (loading) => {
+    if (loading) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }
+
+  const loadPage = (setLoading) => {
+    // scroll to top everytime the page loads
+    window.scrollTo(0, 0);
+
+    // remove the loading screen after the page load time
+    let timer = setTimeout(() => {
+      setLoading(false);
+    }, pageLoadTime);
+    return () => clearTimeout(timer);
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", ensureNavbarStickyAfterHeaderHeightScroll);
     return () => window.removeEventListener("scroll", ensureNavbarStickyAfterHeaderHeightScroll);
@@ -44,50 +65,55 @@ const App = () => {
           render={(props) => (
             <Home
               {...props}
-              pageLoadTime={pageLoadTime}
               navbarRef={navbarRef}
               pageTitleRef={pageTitleRef}
-              headerRef={headerRef} />)}
+              headerRef={headerRef} 
+              togglePageScroll={togglePageScroll}
+              loadPage={loadPage} />)}
         />
         <Route
           path="/about-us"
           render={(props) => (
             <AboutUs
               {...props}
-              pageLoadTime={pageLoadTime}
               navbarRef={navbarRef}
               pageTitleRef={pageTitleRef}
-              headerRef={headerRef} />)}
+              headerRef={headerRef}
+              togglePageScroll={togglePageScroll} 
+              loadPage={loadPage} />)}
         />
         <Route
           path="/partners"
           render={(props) => (
             <Partners
               {...props}
-              pageLoadTime={pageLoadTime}
               navbarRef={navbarRef}
               pageTitleRef={pageTitleRef}
-              headerRef={headerRef} />)}
+              headerRef={headerRef}
+              togglePageScroll={togglePageScroll}
+              loadPage={loadPage} />)}
         />
         <Route
           path="/resources"
           render={(props) => (
             <Resources
               {...props}
-              pageLoadTime={pageLoadTime}
               navbarRef={navbarRef}
               pageTitleRef={pageTitleRef}
-              headerRef={headerRef} />)}
+              headerRef={headerRef}
+              togglePageScroll={togglePageScroll}
+              loadPage={loadPage} />)}
         />
         <Route
           path="/faqs"
           render={(props) => (
             <FAQs
               {...props}
-              pageLoadTime={pageLoadTime}
               navbarRef={navbarRef}
               pageTitleRef={pageTitleRef}
-              headerRef={headerRef} />)}
+              headerRef={headerRef} 
+              togglePageScroll={togglePageScroll}
+              loadPage={loadPage} />)}
         />
 
         {/* When a user enters an invalid route, redirect to the home page */}

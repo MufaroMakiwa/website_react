@@ -9,7 +9,7 @@ import PageTitle from "../../components/page_title/PageTitle";
 import Navbar from "../../components/navbar/Navbar";
 
 
-const Resources = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
+const Resources = ({ navbarRef, headerRef, pageTitleRef, togglePageScroll, loadPage }) => {
 
   const [loading, setLoading] = useState(true);
   const pageTitle = "Resources for MIT Africans";
@@ -30,22 +30,11 @@ const Resources = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
   }
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
-
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setLoading(false);
-    }, pageLoadTime);
-    return () => clearTimeout(timer);
+    return loadPage(setLoading)
   }, []);
 
   useEffect(() => {
-    if (loading) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+    togglePageScroll(loading)
   }, [loading])
 
   return (

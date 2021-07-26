@@ -9,8 +9,7 @@ import PageTitle from "../../components/page_title/PageTitle";
 import Navbar from "../../components/navbar/Navbar";
 
 
-const AboutUs = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
-
+const AboutUs = ({ navbarRef, headerRef, pageTitleRef, togglePageScroll, loadPage }) => {
 
   const [loading, setLoading] = useState(true);
   const pageTitle = "About Us";
@@ -37,22 +36,11 @@ const AboutUs = ({ pageLoadTime, navbarRef, headerRef, pageTitleRef }) => {
   }
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
-
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setLoading(false);
-    }, pageLoadTime);
-    return () => clearTimeout(timer);
+    return loadPage(setLoading)
   }, []);
 
   useEffect(() => {
-    if (loading) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+    togglePageScroll(loading)
   }, [loading])
 
   return (
