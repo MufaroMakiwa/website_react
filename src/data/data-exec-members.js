@@ -7,6 +7,7 @@ import Sharon from "../assets/photo_sharon.jpg";
 import Ayo from "../assets/photo_ayo.jpg";
 import Bukunmi from "../assets/photo_bukunmi.jpg";
 import Nickie from "../assets/photo_nickie.jpg";
+import Denzel from "../assets/photo_denzel.jpg";
 
 
 export const exec_members = [
@@ -190,19 +191,19 @@ export const exec_members = [
     key: 9,
     name: "Denzel Segbefia",
     position: "Social Chair",
-    city_origin: null,
-    country_origin: null,
+    city_origin: "Accra",
+    country_origin: "Ghana",
     majors: [
       {
         key: 0,
-        course_name: null,
-        course_number: null
+        course_name: "Earth, Atmospheric, and Planetary Sciences",
+        course_number: "12"
       }
     ],
     linkedin: null,
     facebook: "https://www.facebook.com/denzelsegbefia/",
-    instagram: null,
+    instagram: "https://www.instagram.com/denzelsegbefia/",
     email: "denzel@mit.edu",
-    photo: null,
+    photo: Denzel,
   }
 ]
