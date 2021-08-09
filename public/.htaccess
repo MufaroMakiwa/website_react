@@ -7,7 +7,7 @@
 # TODO - I have yet to figure out what this does...
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /website/
+  RewriteBase /website_react/build/
   RewriteRule ^index\.php$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
