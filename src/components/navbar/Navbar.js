@@ -81,6 +81,7 @@ const Navbar = ({ active, navbarRef }) => {
         return "FAQs";
 
       default:
+        return "Error"
     }
   }
 
