@@ -12,9 +12,9 @@
   position: fixed;
   top: 0;
   border-bottom: 3px solid var(--color-white-alpha-050);
-  -webkit-box-shadow: 0 2px 6px 0 var(--color-box-shadow-dark); 
-  -moz-box-shadow: 0 2px 6px 0 var(--color-box-shadow-dark); 
-  box-shadow: 0 2px 6px  var(--color-box-shadow-dark);
+  -webkit-box-shadow: 0 2px 6px 0 var(--color-box-shadow-dark);
+  -moz-box-shadow: 0 2px 6px 0 var(--color-box-shadow-dark);
+  box-shadow: 0 2px 6px var(--color-box-shadow-dark);
 }
 
 .navbar-container ul {
@@ -32,7 +32,7 @@
 
 .navbar-container ul li a,
 .navbar-container ul li a:link,
-.navbar-container ul li a:visited{
+.navbar-container ul li a:visited {
   text-decoration: none;
   color: white;
 }
@@ -99,7 +99,7 @@
 
   .navbar-container ul::before {
     display: block;
-    content: 'Menu';
+    content: "Menu";
     font-weight: 700;
     font-size: 1.5em;
     margin-bottom: 1rem;
